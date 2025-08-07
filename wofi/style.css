@@ -1,21 +1,22 @@
 * {
-  font-family: JetBrainsMono;
+  font-family: RobotoMono Nerd Font;
   color: #e5e9f0;
   background: transparent;
 }
 
 #window {
-  background: rgba(41, 46, 66, 0.5);
+  background: rgba(41, 46, 66, 0.95);
   margin: auto;
   padding: 10px;
-  border-radius: 20px;
-  border: 5px solid #b072d1;
+  border-radius: 10px;
+  border: 2px solid #72c6d1;
 }
 
 #input {
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
+  border: 1px solid #72c6d1;
 }
 
 #outer-box {
@@ -28,7 +29,7 @@
 
 #entry {
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 #entry:selected {

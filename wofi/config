@@ -1,6 +1,6 @@
 hide_scroll=true
 show=drun
-width=30%
+width=20%
 line_wrap=word
 term=kitty
 allow_markup=true
