@@ -1,0 +1,1 @@
+kitty --session ~/.config/kitty/homie.session

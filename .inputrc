@@ -1,0 +1,4 @@
+# Stop bash from eating Shift+Arrow
+"\e[1;2C": ""
+"\e[1;2D": ""
+"\e[3;2~": kill-whole-line

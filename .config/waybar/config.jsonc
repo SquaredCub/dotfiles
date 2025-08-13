@@ -1,0 +1,94 @@
+{
+    "layer": "bottom",
+    "spacing": 0,
+    "height": 0,
+    "margin-top": 0,
+    "margin-right": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "cpu_text",
+        "cpu",
+        "temperature#cpu",
+        "custom/gpu-temp",
+        "memory",
+        "battery",
+        "network",
+        "pulseaudio"
+    ],
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "tooltip": false
+    },
+    "hyprland/window": {
+        "format": "{title}",
+        "separate-outputs": true,
+        "rewrite": {
+            "(.*) — Mozilla Firefox": "󰈹 Firefox",
+            "(.*) - Code (.*)": " VSCode"
+        }
+    },
+    "tray": {
+        "spacing": 10,
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:%H:%M}  ",
+        "format-alt": "{:%A, %B %d, %Y}",
+        "tooltip": false
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "interval": 2,
+        "states": {
+            "critical": 90
+        }
+    },
+    "memory": {
+        "format": " {percentage}%",
+        "interval": 2,
+        "states": {
+            "critical": 80
+        }
+    },
+    // Specific to my setup
+    "temperature#cpu": {
+        "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": " {temperatureC}°C",
+        "format": " {temperatureC}°C",
+        "tooltip": false
+    },
+    // Specific to my setup
+    "custom/gpu-temp": {
+        "exec": "nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
+        "interval": 5,
+        "format": "󱄄 {}°C",
+        "tooltip": false
+    },
+    "network": {
+        "format-wifi": "wifi up",
+        "format-ethernet": "󰲝 up",
+        "format-disconnected": "no network",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "max-volume": 150,
+        "format": "󰖀 {volume}%",
+        "format-bluetooth": "vol {volume}%",
+        "nospacing": 1,
+        "on-click": "pavucontrol",
+        "tooltip": false
+    }
+}

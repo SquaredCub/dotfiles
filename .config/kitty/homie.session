@@ -1,0 +1,6 @@
+launch --title "ec2xk" bash
+cd ~/capsulecorp/ec2xk
+launch --title "awsxk" bash
+cd ~/capsulecorp/awsxk
+launch --title "medieval" bash
+cd ~/capsulecorp/medieval
